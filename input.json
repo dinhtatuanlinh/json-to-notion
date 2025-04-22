@@ -1,0 +1,138 @@
+{
+    "param": {
+      "fields": {}
+    },
+    "query": {
+      "fields": {}
+    },
+    "request_body": {
+      "fields": {
+        "club_id": {
+          "type": "uint64",
+          "required": true,
+          "description": "ID of the club to register the reward for"
+        },
+        "reward_name": {
+          "type": "string",
+          "required": true,
+          "description": "Name of the reward"
+        },
+        "section": {
+          "type": "string",
+          "required": true,
+          "description": "Section type of the reward (1: Download, 2: Physics)",
+          "enum": ["1", "2"]
+        },
+        "achievement_amount": {
+          "type": "uint64",
+          "required": true,
+          "description": "Amount required to achieve the reward"
+        },
+        "created": {
+          "type": "string",
+          "required": true,
+          "description": "Creator of the reward"
+        },
+        "shipment_source": {
+          "type": "string",
+          "required": true,
+          "description": "Source of shipment for the reward"
+        },
+        "distribution_start_date": {
+          "type": "string",
+          "required": true,
+          "description": "Start date of reward distribution"
+        },
+        "distribution_start_time": {
+          "type": "string",
+          "required": true,
+          "description": "Start time of reward distribution"
+        },
+        "distribution_end_date": {
+          "type": "string",
+          "required": true,
+          "description": "End date of reward distribution"
+        },
+        "distribution_end_time": {
+          "type": "string",
+          "required": true,
+          "description": "End time of reward distribution"
+        },
+        "distribution_status": {
+          "type": "string",
+          "required": true,
+          "description": "Status of reward distribution (0: Distributing, 1: Distributing stopped, 2: Distributing finished)",
+          "enum": ["0", "1", "2"]
+        },
+        "total_order": {
+          "type": "int64",
+          "required": true,
+          "description": "Total number of orders for the reward"
+        },
+        "reward_content": {
+          "type": "string",
+          "required": true,
+          "description": "Content/description of the reward"
+        },
+        "form_content": {
+          "type": "string",
+          "required": false,
+          "description": "Form content for the reward"
+        },
+        "repayment_channel": {
+          "type": "string",
+          "required": false,
+          "description": "Channel for repayment"
+        },
+        "repayment_note": {
+          "type": "string",
+          "required": false,
+          "description": "Note for repayment"
+        },
+        "reward_animation_info": {
+          "type": "object",
+          "required": false,
+          "description": "Animation information for the reward",
+          "properties": {
+            "loading_animations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "running_animations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "ending_animations": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            }
+          }
+        },
+        "nft_chain_name": {
+          "type": "string",
+          "required": false,
+          "description": "Name of the NFT chain"
+        },
+        "nft_contract_address": {
+          "type": "string",
+          "required": false,
+          "description": "Contract address for the NFT"
+        }
+      }
+    },
+    "response": {
+      "fields": {
+        "reward_id": {
+          "type": "uint64",
+          "required": true,
+          "description": "ID of the registered reward"
+        }
+      }
+    }
+  }
