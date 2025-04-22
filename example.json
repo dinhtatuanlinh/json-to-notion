@@ -1,0 +1,17 @@
+{
+    "reward_animation_info": {
+        "loading_animations": ["1", "2", "3"],
+        "running_animations": ["adf", "fefds"]
+    },
+    "arr_obj_field": [{
+        "running_animations": ["adf", "ddd", "fefds"],
+        "ending_animations": ["fdsfef", "fdsffdsf"],
+        "pro_child": ["dfd"],
+        "loading_animations": ["adf", "ddd", "fefds"]
+    }],
+    "first_child": 3,
+    "second_child": "dfd",
+    "achievement_amount": 100,
+    "created": "ade",
+    "distribution_status": "88jj"
+}

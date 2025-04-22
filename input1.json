@@ -1,0 +1,109 @@
+{
+    "param": {
+        "fields": {}
+    },
+    "query": {
+        "fields": {}
+    },
+    "request_body": {
+        "fields": {
+            "aclub_id": {
+                "type": "uint64",
+                "required": true,
+                "description": "ID of the club to register the reward for"
+            },
+            "areward_name": {
+                "type": "string",
+                "required": true,
+                "description": "Name of the reward"
+            },
+            "asection": {
+                "type": "string",
+                "required": true,
+                "description": "Section type of the reward (1: Download, 2: Physics)",
+                "enum": ["1", "2"]
+            },
+            "aachievement_amount": {
+                "type": "uint64",
+                "required": true,
+                "description": "Amount required to achieve the reward"
+            },
+            "asectaaion": {
+                "type": "string",
+                "required": true,
+                "description": "Section type of the reward (1: Download, 2: Physics)",
+                "enum": ["1", "2", "33"]
+            },
+            "acreated": {
+                "type": "string",
+                "required": true,
+                "description": "Creator of the reward"
+            },
+            "distraibution_status": {
+                "type": "string",
+                "required": true,
+                "description": "Status of reward distribution (0: Distributing, 1: Distributing stopped, 2: Distributing finished)",
+                "enum": ["0", "1", "2"]
+            },
+            "rewaard_animation_info": {
+                "type": "object",
+                "required": false,
+                "description": "Animation information for the reward",
+                "properties": {
+                    "loading_aanimations": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "running_aniamations": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "ending_aniamations": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "test_mot": {
+                        "type": "array",
+                        "items": {
+                            "type": "boolean"
+                        }
+                    },
+                    "test_hai": {
+                        "type": "array",
+                        "items": {
+                            "type": "int"
+                        }
+                    },
+                    "test_ba": {
+                        "type": "boolean"
+                    }
+                }
+            },
+            "nft_chaain_name": {
+                "type": "string",
+                "required": false,
+                "description": "Name of the NFT chain"
+            },
+            "nft_contaract_address": {
+                "type": "string",
+                "required": false,
+                "description": "Contract address for the NFT"
+            }
+        }
+    },
+    "response": {
+        "fields": {
+            "rewaard_id": {
+                "type": "uint64",
+                "required": true,
+                "description": "ID of the registered reward"
+            }
+        }
+    }
+}

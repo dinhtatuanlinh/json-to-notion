@@ -1,0 +1,107 @@
+{
+    "param": {
+        "fields": {}
+    },
+    "query": {
+        "fields": {}
+    },
+    "request_body": {
+        "fields": {
+            "first_child": {
+                "type": "uint64",
+                "required": true,
+                "description": "ID of the club to register the reward for"
+            },
+            "second_child": {
+                "type": "string",
+                "required": true,
+                "description": "Name of the reward"
+            },
+            "section": {
+                "type": "string",
+                "required": true,
+                "description": "Section type of the reward (1: Download, 2: Physics)",
+                "enum": ["1", "2"]
+            },
+            "achievement_amount": {
+                "type": "uint64",
+                "required": true,
+                "description": "Amount required to achieve the reward"
+            },
+            "created": {
+                "type": "string",
+                "required": true,
+                "description": "Creator of the reward"
+            },
+            "distribution_status": {
+                "type": "string",
+                "required": true,
+                "description": "Status of reward distribution (0: Distributing, 1: Distributing stopped, 2: Distributing finished)",
+                "enum": ["0", "1", "2"]
+            },
+            "reward_animation_info": {
+                "type": "object",
+                "required": false,
+                "description": "Animation information for the reward",
+                "properties": {
+                    "loading_animations": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    },
+                    "running_animations": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        }
+                    }
+                }
+            },
+            "arr_obj_field": {
+                "type": "array",
+                "required": false,
+                "description": "Animation information for the reward",
+                "items": {
+                    "type": "object",
+                    "required": false,
+                    "description": "Animation information for the reward",
+                    "properties": {
+                        "loading_animations": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "running_animations": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        },
+                        "ending_animations": {
+                            "type": "array",
+                            "items": {
+                                "type": "string"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "response": {
+        "fields": {
+            "first_child": {
+                "type": "uint64",
+                "required": true,
+                "description": "ID of the registered reward"
+            },
+            "reward_id": {
+                "type": "uint64",
+                "required": true,
+                "description": "ID of the registered reward"
+            }
+        }
+    }
+}
